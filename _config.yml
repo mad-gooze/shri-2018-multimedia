@@ -11,17 +11,9 @@ default_lang: en
 default_body_class: list
 
 presentation:
-    title: Название презентации
-    service: Название сервиса
+    title: Работа с внешними зависимостями
     nda: false
     lang: ru            # ru, en
-
-author:
-    name: Автор
-    position: Должность
-    company:
-        name: Яндекс
-        url:  http://yandex.ru/
 
 # второй автор
 # author2:
