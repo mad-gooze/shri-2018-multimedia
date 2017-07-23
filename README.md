@@ -157,8 +157,8 @@ bundle install
 ```
 Запуск:
 ```shell
-bundle exec jekyll b # собрать презенацию в _site/
-bundle exec jekyll b --watch # собирать презенацию в _site/ с вотчером изменений
+bundle exec jekyll b # собрать презентацию в _site/
+bundle exec jekyll b --watch # собирать презентацию в _site/ с вотчером изменений
 bundle exec jekyll l # запуск сервера с live reload
 ```
 
