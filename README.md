@@ -140,6 +140,28 @@ git remote add public https://github.com/[owner]/[repo-name].git
 git push public --mirror
 ```
 
+### Как редактировать презентацию локально
+Чтобы каждый раз не коммитить изменения и не ждать сборки github pages, можно запустить jekyll локально. В системе должны быть установлены ruby, rubygems и bundler.
+
+Инструкция для mac os:
+```shell
+git clone https://github.yandex-team.ru/[owner]/[repo-name].git
+cd [repo-name]
+brew install rbenv ruby-build # на маке старая версия ruby, будем ставить новую из rbenv
+rbenv init
+rbenv install 2.4.1 --verbose # ставим ruby 2.4.1 (долго!)
+rbenv local 2.4.1 # включаем ruby 2.4.1 для папки [repo-name]
+gem install bundler
+bundle install
+```
+Запуск:
+```shell
+bundle exec jekyll b # собрать презенацию в _site/
+bundle exec jekyll b --watch # собирать презенацию в _site/ с вотчером изменений
+bundle exec jekyll l # запуск сервера с live reload
+```
+
+
 ### Материалы для презентаций
 
 Полная библиотека материалов для презентаций от лица Яндекса — примеры оформления слайдов с графиками, диаграммами, таблицами, картами, схемами, гаджетами, пиктограммы, иллюстрации и фотографии — находится по адресу [patterns.yandex-team.ru/presentations](https://patterns.yandex-team.ru/presentations).
