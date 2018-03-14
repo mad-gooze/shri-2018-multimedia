@@ -105,7 +105,7 @@ style: |
 <div style="display: flex; height: 65%; justify-content: space-around">
 <iframe scrolling="no" allowfullscreen="" gesture="media" allow="autoplay; encrypted-media" src="https://yastatic.net/yandex-video-player-iframe-api-bundles/1.0-262/index.html?mq_url=https%3A%2F%2Fstrm.yandex.ru%2Fkal%2Ftnt%2Ftnt0.m3u8%3Ffrom_block%3Dtv_button%26reqid%3D1520941532.91357.22881.21472%26hash%3D463ef2410b563f0ffd29f702718a8e79%26from%3Dmorda%26slots%3D63208%252C0%252C39%26type%3Dinitial&amp;autoplay=false&amp;preload=true" style="border-width: 0px; display: block; width: 45%; height: 100%;"></iframe>
 <video loop preload="auto" muted controls
-    src="http://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
     style="width: 45%; height: 100%; display: inline-block; background: black"
 ></video>
 </div>
@@ -120,7 +120,7 @@ style: |
 ## GIF vs WEBM
 <div style="display: flex; justify-content: space-around">
     <video loop autoplay muted
-        src="http://automatic-bottle.surge.sh/kitten_fighting.webm"
+        src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
         style="width: 40%; height: auto; display: inline-block"
     ></video>
     <img
@@ -280,22 +280,22 @@ https://dev.w3.org/html5/spec-preview/media-elements.html
 
 <div style="display: flex; height: 55%; justify-content: space-around">
 <video loop preload="auto" muted controls
-    src="http://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
     style="width: 30%; height: 100%; display: inline-block; background: black"
 ></video>
 <video loop preload="metadata" muted controls
-    src="http://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
     style="width: 30%; height: 100%; display: inline-block; background: black"
 ></video>
 <video loop preload="none" muted controls
-    src="http://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
     style="width: 30%; height: 100%; display: inline-block; background: black"
 ></video>
 </div>
 
 ## Постер
 `<video src="video.webm" poster="yandex.jpg"></video>`
-<video controls preload="none" src="http://automatic-bottle.surge.sh/kitten_fighting.webm" poster="yandex.jpg"
+<video controls preload="none" src="https://automatic-bottle.surge.sh/kitten_fighting.webm" poster="yandex.jpg"
     style="width: 100%; height: 60%; display: inline-block"
 ></video>
 
@@ -337,7 +337,7 @@ video.play()
 
 <div style="display: flex; justify-content: space-around">
     <video loop autoplay muted controls id="video-for-canvas"
-        src="http://automatic-bottle.surge.sh/kitten_fighting.webm"
+        src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
         style="width: 40%; height: auto; display: inline-block"
     ></video>
     <canvas id="canvas-for-video"
