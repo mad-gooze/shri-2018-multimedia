@@ -394,6 +394,8 @@ navigator.mediaDevices.getUserMedia({
     });
 ```
 
+### https://developers.google.com/web/fundamentals/media/recording-video/#access_the_camera_interactively
+
 ## Обработка видео в реальном времени
 
 **tracking.js**
@@ -475,7 +477,7 @@ navigator.mediaDevices.getUserMedia({
   <tr>
    <th></th>
    <th>Android</th>
-   <th>iOS</th>
+   <th>iOS/Safari</th>
    <th>Edge</th>
    <th>Smart TV</th>
   </tr>
