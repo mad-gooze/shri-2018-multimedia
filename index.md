@@ -105,7 +105,7 @@ style: |
 <div style="display: flex; height: 65%; justify-content: space-around">
 <iframe scrolling="no" allowfullscreen="" gesture="media" allow="autoplay; encrypted-media" src="https://yastatic.net/yandex-video-player-iframe-api-bundles/1.0-262/index.html?mq_url=https%3A%2F%2Fstrm.yandex.ru%2Fkal%2Ftnt%2Ftnt0.m3u8%3Ffrom_block%3Dtv_button%26reqid%3D1520941532.91357.22881.21472%26hash%3D463ef2410b563f0ffd29f702718a8e79%26from%3Dmorda%26slots%3D63208%252C0%252C39%26type%3Dinitial&amp;autoplay=false&amp;preload=true" style="border-width: 0px; display: block; width: 45%; height: 100%;"></iframe>
 <video loop preload="auto" muted controls
-    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=0"
     style="width: 45%; height: 100%; display: inline-block; background: black"
 ></video>
 </div>
@@ -120,7 +120,7 @@ style: |
 ## GIF vs WEBM
 <div style="display: flex; justify-content: space-around">
     <video loop autoplay muted
-        src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
+        src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=1"
         style="width: 40%; height: auto; display: inline-block"
     ></video>
     <img
@@ -175,15 +175,15 @@ style: |
     </tr>
     <tr>
         <td>.webm</td>
-        <td>VP8, VP9 (видео) <br> Vorbis, Opus (аудио)</td>
+        <td>VP8/VP9 (видео) +<br> Vorbis/Opus (аудио)</td>
     </tr>
     <tr>
         <td>.ogg</td>
-        <td>Theora (видео), Vorbis (аудио)</td>
+        <td>Theora (видео) + Vorbis (аудио)</td>
     </tr>
     <tr>
         <td>.mp4</td>
-        <td>H.264 (видео), AAC, MP3 (аудио)</td>
+        <td>H.264 (видео) + AAC/MP3 (аудио)</td>
     </tr>
 </table>
 </div>
@@ -280,22 +280,22 @@ https://dev.w3.org/html5/spec-preview/media-elements.html
 
 <div style="display: flex; height: 55%; justify-content: space-around">
 <video loop preload="auto" muted controls
-    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=2"
     style="width: 30%; height: 100%; display: inline-block; background: black"
 ></video>
 <video loop preload="metadata" muted controls
-    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=3"
     style="width: 30%; height: 100%; display: inline-block; background: black"
 ></video>
 <video loop preload="none" muted controls
-    src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
+    src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=4"
     style="width: 30%; height: 100%; display: inline-block; background: black"
 ></video>
 </div>
 
 ## Постер
 `<video src="video.webm" poster="yandex.jpg"></video>`
-<video controls preload="none" src="https://automatic-bottle.surge.sh/kitten_fighting.webm" poster="yandex.jpg"
+<video controls preload="none" src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=5" poster="yandex.jpg"
     style="width: 100%; height: 60%; display: inline-block"
 ></video>
 
@@ -304,7 +304,7 @@ https://dev.w3.org/html5/spec-preview/media-elements.html
 <div style="display: flex; justify-content: center; align-items: center; height: 75%;">
 <img src="autoplay.jpg" style="width: 40%; text-align: center;"/>
 </div>
-### https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+### <a target="_blank" href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">https://developers.google.com/web/updates/2017/09/autoplay-policy-changes</a>
 
 ## Media Engagement Index (MEI)
 Chrome 64+
@@ -317,7 +317,7 @@ Chrome 64+
 * Вкладка с видео должна быть активна
 * Размер видео должен быть больше, чем 200x140 пискелей
 
-### https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+### <a target="_blank" href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">https://developers.google.com/web/updates/2017/09/autoplay-policy-changes</a>
 
 ## Программный запуск видео
 ```javascript
@@ -337,7 +337,7 @@ video.play()
 
 <div style="display: flex; justify-content: space-around">
     <video loop autoplay muted controls id="video-for-canvas"
-        src="https://automatic-bottle.surge.sh/kitten_fighting.webm"
+        src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=6"
         style="width: 40%; height: auto; display: inline-block"
     ></video>
     <canvas id="canvas-for-video"
@@ -509,12 +509,12 @@ navigator.mediaDevices.getUserMedia({
 
 https://www.w3.org/TR/media-source/
 
-### Подоробнее https://developers.google.com/web/fundamentals/media/mse/basics
+### <a target="_blank" href="https://developers.google.com/web/fundamentals/media/mse/basics">https://developers.google.com/web/fundamentals/media/mse/basics</a>
 
 ## Библиотеки, использующие MSE
-* hls.js (Apple HLS)
-* dash.js (MPEG-DASH)
-* shaka-player (MPEG-DASH, Microsoft Smooth Streaming, Apple HLS)
+* <a target="_blank" href="https://github.com/video-dev/hls.js/">hls.js</a> (Apple HLS)
+* <a target="_blank" href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a> (MPEG-DASH)
+* <a target="_blank" href="https://github.com/google/shaka-player">shaka-player</a> (MPEG-DASH, Microsoft Smooth Streaming, Apple HLS)
 
 ## Защита контента (DRM)
 {:.section}
@@ -533,7 +533,7 @@ https://www.w3.org/TR/encrypted-media/
 * Widevine (Google)
 * PlayReady (Microsoft)
 
-### О поддержке - https://developer.bitmovin.com/hc/en-us/articles/115001445814-Browser-DRM-Support
+### <a target="_blank" href="https://developer.bitmovin.com/hc/en-us/articles/115001445814-Browser-DRM-Support">https://developer.bitmovin.com/hc/en-us/articles/115001445814-Browser-DRM-Support</a>
 
 ## Видео в Яндексе
 {:.fullscreen}
@@ -550,3 +550,21 @@ https://www.w3.org/TR/encrypted-media/
 ## Домашнее задание
 {:.fullscreen}
 <iframe style="width: 100%; height: 100%" src="https://www.youtube-nocookie.com/embed/CZlEiD6Nmnc?rel=0&amp;showinfo=0&amp;start=20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## Небходимый набор эффектов
+* фильтр для видео, чтобы сделать картинку похожей на видео с камеры терминатора (подумайте, как можно сделать цветокоррекцию)
+* анимированный "интерфейс" терминатора
+* эффект "помех" в сигнале (нужно сделать наложение помех на видео и, при желании, на интерфейс - для этого так же есть несколько способов)
+* визуализация звукового сигнала - отображение уровня громкости (вам понадобится Web Audio API)
+
+## Бонус-трек
+* визуализация не только громкости звука, а и еще и звуковых частот, т.е. отображение спектрограммы в реальном времени
+* детектирование движения на видео (вам понадобится API Canvas getImageData для работы с пикселями изображения - для детектора движения нужно сравнивать текущий кадр с предыдущим, подумайте о том, как это сделать без серьезных проблем с производительностью).
+* Реализция какого-нибудь из эффектов на WebGL.
+* Творческое - придумайте какой-нибудь эффект самостоятельно и реализуйте его.
+
+## Требования
+* Ваше приложение должно уверенно работать в последней версии Chrome и Firefox.
+* Плюсом будет, если вы реализуете проверку требуемых фичей (т.е. graceful degradation), чтобы, если какая-то из технологий, которую вы используете не поддерживается браузером, приложение не ломалось.
+* Мы будем проверять производительность - при работе ваше приложение должно иметь хороший FPS (не ниже 40 и не ниже 25 с детектором движения).
+* В readme опишите, какие эффекты вы реализовали, какие технологии вы для этого использовали, и почему вы выбрали именно их.
