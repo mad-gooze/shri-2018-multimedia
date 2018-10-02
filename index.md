@@ -99,11 +99,11 @@ style: |
 * WebGL и HTML5 Canvas
 
 ## Отображение видео-роликов в браузере
-* встроеннее контролы - `<video controls ...></video>`
+* встроенные контролы - `<video controls ...></video>`
 * собственный скин и управление видео-тегом через API
 
 <div style="display: flex; height: 65%; justify-content: space-around">
-<iframe scrolling="no" allowfullscreen="" gesture="media" allow="autoplay; encrypted-media" src="https://yastatic.net/yandex-video-player-iframe-api-bundles/1.0-262/index.html?mq_url=https%3A%2F%2Fstrm.yandex.ru%2Fkal%2Ftnt%2Ftnt0.m3u8%3Ffrom_block%3Dtv_button%26reqid%3D1520941532.91357.22881.21472%26hash%3D463ef2410b563f0ffd29f702718a8e79%26from%3Dmorda%26slots%3D63208%252C0%252C39%26type%3Dinitial&amp;autoplay=false&amp;preload=true" style="border-width: 0px; display: block; width: 45%; height: 100%;"></iframe>
+<iframe scrolling="no" allowfullscreen="" gesture="media" allow="autoplay; encrypted-media" src="https://yastatic.net/yandex-video-player-iframe-api-bundles/1.0-354/index.html?mq_url=https%3A%2F%2Fstrm.yandex.ru%2Fkal%2Fohotnik%2Fohotnik0.m3u8&volume=0&muted=true&autoplay=true&report=false&report_url=https%3A%2F%2Fyandex.ru%2Fsupport%2Fteletranslation%2Fform.html&preview=&host=pcode-ci.s3.mds.yandex.net&additional_params=%7B%22from%22%3A%22other%22%2C%22vsid%22%3A%2271488b333da804dcbb6db3e9d76b919a6b6425e5b5154e489e9899d2b87c852c%22%7D&vsid=71488b333da804dcbb6db3e9d76b919a6b6425e5b5154e489e9899d2b87c852c" style="border-width: 0px; display: block; width: 45%; height: 100%;"></iframe>
 <video loop preload="auto" muted controls
     src="https://automatic-bottle.surge.sh/kitten_fighting.webm?id=0"
     style="width: 45%; height: 100%; display: inline-block; background: black"
@@ -113,7 +113,7 @@ style: |
 
 ## Анимации
 
-<video autoplay muted controls style="width: 100%; height: 80%; background: black;" src="oscar.webm">
+<video autoplay muted style="width: 100%; height: 80%; background: black;" src="oscar.webm">
 </video>
 ### https://www.kinopoisk.ru/special/oscar/
 
