@@ -65,31 +65,12 @@ style: |
 * Встриваемые плагины плееров <br> (QuickTime, Windows Media Player и т.д.)
 
 ## HTML5 Media Elements
-
+{:.images}
 ```html
 <video>
 <audio>
 ```
-
-<table>
- <tbody>
-  <tr>
-   <th></th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая<br>поддержка</td>
-   <td>3.0+</td>
-   <td>3.5+</td>
-   <td>9.0+</td>
-   <td>3.1+</td>
-  </tr>
-
- </tbody>
-</table>
+<img src="caniuse-video.png" style="width: 100%;"/>
 
 ### https://developer.mozilla.org/ru/docs/Web/HTML/Element/video
 
@@ -252,6 +233,15 @@ style: |
 </video>
 ```
 
+## API - HTMLMediaElement
+HTMLVideoElement и HTMLAudioElement наследуют от общего интерфейса
+
+HTMLMediaElement
+
+<a href="https://dev.w3.org/html5/spec-preview/media-elements.html">
+https://dev.w3.org/html5/spec-preview/media-elements.html
+</a>
+
 ## Проверка поддержки формата в браузере
 ```javascript
 video.canPlayType(mimeType)
@@ -262,16 +252,6 @@ video.canPlayType(mimeType)
 * ``'probably'`` - видео скорее всего проиграется
 * `'maybe'` - нельзя точно установить, проиграется ли видео без попытки запуска
 * `''` (пустая строка) - не поддерждивается
-
-
-## API - HTMLMediaElement
-HTMLVideoElement и HTMLAudioElement наследуют от общего интерфейса
-
-HTMLMediaElement
-
-<a href="https://dev.w3.org/html5/spec-preview/media-elements.html">
-https://dev.w3.org/html5/spec-preview/media-elements.html
-</a>
 
 ## preload
 * `'auto'`
@@ -346,12 +326,11 @@ video.play()
 </div>
 
 ```javascript
-function draw(video, canvasContext) {
-    canvasContext.drawImage(video, canvasContext, 0, 0);
-    requestAnimationFrame(() => {
-        draw(video, canvasContext);
-    });
+function loop() {
+    canvasContext.drawImage(video, 0, 0);
+    requestAnimationFrame(loop);
 }
+loop();
 ```
 
 <script>
@@ -377,7 +356,9 @@ loop();
 
   navigator.mediaDevices.getUserMedia({ audio: true, video: true })
       .then((stream) => {
-          player.src = URL.createObjectURL(stream)
+          // deprecated!
+          // player.src = URL.createObjectURL(stream);
+          player.srcObject = stream;
       });
 </script>
 
@@ -390,7 +371,9 @@ navigator.mediaDevices.getUserMedia({
     video: true
 })
     .then((stream) => {
-        video.src = URL.createObjectURL(stream)
+        // deprecated!
+        // video.src = URL.createObjectURL(stream);
+        video.srcObject = stream;
     });
 ```
 
@@ -557,23 +540,5 @@ https://www.w3.org/TR/encrypted-media/
 {:.section}
 
 ## Домашнее задание
-{:.fullscreen}
-<iframe style="width: 100%; height: 100%" src="https://www.youtube-nocookie.com/embed/CZlEiD6Nmnc?rel=0&amp;showinfo=0&amp;start=20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Небходимый набор эффектов
-* фильтр для видео, чтобы сделать картинку похожей на видео с камеры терминатора (подумайте, как можно сделать цветокоррекцию)
-* анимированный "интерфейс" терминатора
-* эффект "помех" в сигнале (нужно сделать наложение помех на видео и, при желании, на интерфейс - для этого так же есть несколько способов)
-* визуализация звукового сигнала - отображение уровня громкости (вам понадобится Web Audio API)
-
-## Бонус-трек
-* визуализация не только громкости звука, а и еще и звуковых частот, т.е. отображение спектрограммы в реальном времени
-* детектирование движения на видео (вам понадобится API Canvas getImageData для работы с пикселями изображения - для детектора движения нужно сравнивать текущий кадр с предыдущим, подумайте о том, как это сделать без серьезных проблем с производительностью).
-* Реализция какого-нибудь из эффектов на WebGL.
-* Творческое - придумайте какой-нибудь эффект самостоятельно и реализуйте его.
-
-## Требования
-* Ваше приложение должно уверенно работать в последней версии Chrome и Firefox.
-* Плюсом будет, если вы реализуете проверку требуемых фичей (т.е. graceful degradation), чтобы, если какая-то из технологий, которую вы используете не поддерживается браузером, приложение не ломалось.
-* Мы будем проверять производительность - при работе ваше приложение должно иметь хороший FPS (не ниже 40 и не ниже 25 с детектором движения).
-* В readme опишите, какие эффекты вы реализовали, какие технологии вы для этого использовали, и почему вы выбрали именно их.
+<a src="https://github.com/mad-gooze/shri-2018-2-multimedia-homework">https://github.com/mad-gooze/shri-2018-2-multimedia-homework</a>
